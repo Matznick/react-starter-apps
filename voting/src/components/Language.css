@@ -1,0 +1,26 @@
+.language {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: rgb(224, 200, 91);
+  border: 1px solid #222;
+  margin: 2px;
+}
+
+.language button {
+  color: rgb(224, 171, 91);
+  background-color: rgb(0, 0, 0);
+  border: solid black 1px;
+  font-size: 20px;
+  outline: rgb(8, 133, 8);
+  cursor: pointer;
+}
+
+.voteCount {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
