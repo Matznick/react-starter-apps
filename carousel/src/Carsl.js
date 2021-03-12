@@ -16,13 +16,17 @@ class Carsl extends Component {
                      "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/e8fnw35p6zgusq218foj.webp",
                      "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/liw377az16sxmp9a6ylg.webp"  ]             
     
-    
+   pics = [{name: "hongkong", url: "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/jrfyzvgzvhs1iylduuhj.jpg"},
+           {name: "singapore", url: "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/c1cklkyp6ms02tougufx.webp"},
+           {name :"japan", url: "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/e8fnw35p6zgusq218foj.webp"},
+           {name: "anotherone", url: "https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/liw377az16sxmp9a6ylg.webp"  }
+  ]
                      
   render() {
     return(
       <div style={this.styles}>
       <Carousel> 
-        {this.picURLs.map(url => <img src={url}  alt = ""></img>)}
+        {this.pics.map(item => <img src={item.url}  alt = {item.name}></img>)}
       </Carousel>
       </div>
 );
