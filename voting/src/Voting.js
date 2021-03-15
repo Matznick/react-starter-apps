@@ -3,7 +3,10 @@ import './App.css';
 import Language from './components/Language';
 
 class Voting extends Component{
-
+	// die props könnten auch in einem constructor angelegt werden. mit hilfe von object destructuring wird das aber eingespart, da man ja alles übergeben muss und dann mit this.xxx zuweist.
+	// einzelne props im constructor => eher nicht, meist viel zu viele; this.props.xxx ist üblich, es ist understood, dass es auch dem props-objekt kommt. es geht aber auch wie mit einem java-style constructor
+	// damit macht man ja die variablen einzeln bekannt und zieht die aus dem props-objekt raus. dann kann man die einfach nutzen wie normale variablen.
+	// props sind automatisch hierr, ohne dass die implementiert werden müssen. state genauso, beides reserved words. die komponente hier hat nohc keine props, da oberste komponente in dieser app
 	state = {totalcount: 0, lastVoted: "none"};
 	languages = ["Javascript", "Python", "Go", "Java", "Typescript", "Ruby", "Elixir"];
 
