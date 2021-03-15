@@ -5,7 +5,12 @@ class Language extends Component {
 
 state = {count: 0};
 
-increment = (e) => this.setState({count: this.state.count+1});
+increment = () => {
+    return (this.setState({count: this.state.count+1}),
+            this.props.masterCounter(),
+            this.props.updateLastVoted(this.props.language));
+} 
+
 
 render(){
     return(

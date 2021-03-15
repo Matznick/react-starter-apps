@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "deployable-f9072"
+    "default": "deployable-f9072",
+    "sandbox2": "deployable2"
   }
 }
