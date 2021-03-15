@@ -5,8 +5,12 @@ class Language extends Component {
 
 state = {count: 0};
 
+// props sind automatisch hierr, ohne dass die implementiert werden müssen. state genauso, beides reserved words
+
+// masterCOunter und updateLatVoted leben auf edm parent, dass die funktion runterreicht! das child "leiht" diese nur aus, setzt damit aber die states im parent!!!
 increment = () => {
-    return (this.setState({count: this.state.count+1}),
+    return (console.log(this.props),
+        this.setState({count: this.state.count+1}),
             this.props.masterCounter(),
             this.props.updateLastVoted(this.props.language));
 } 
